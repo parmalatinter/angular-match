@@ -26,3 +26,28 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+http://stackoverflow.com/questions/43677629/invalid-host-header-in-when-running-angular-cli-development-server-c9-io
+
+
+
+down vote
+See this issue
+
+"Edit the following line in node_modules/webpack-dev-server/lib/Server.js (line 425):
+
+change to
+
+return true;
+
+I am using cloud9 IDE then run: ng serve --port 8080 --host 0.0.0.0
+
+now works fine."
+
+
+git add .
+git commit -m "work fine"
+git remote add origin gir@github.com:<gitしたいディレクトリ>
+git commit
+git push -u origin master
