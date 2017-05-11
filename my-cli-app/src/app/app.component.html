@@ -33,8 +33,14 @@
                 {{title}} {{message}}
             </h1>
             <app-hello></app-hello>
+
         </md-card>
 
     </div>
 
+    <a [routerLink]="['/mypage']">mypage</a>
+    <a [routerLink]="['/index']">index</a>
+    <div class="outer-outlet">
+        <router-outlet></router-outlet>
+    </div>
 </md-sidenav-container>

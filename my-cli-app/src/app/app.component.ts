@@ -7,7 +7,6 @@ import { MessageService } from './message.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-
 export class AppComponent {
   constructor(private service: MessageService) { }
   message: string;

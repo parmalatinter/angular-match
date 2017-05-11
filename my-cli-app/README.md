@@ -47,7 +47,11 @@ now works fine."
 
 
 git add .
-git commit -m "work fine"
+git commit -m "tmp"
 git remote add origin gir@github.com:<gitしたいディレクトリ>
 git commit
 git push -u origin master
+
+
+Angular CLIによるAngular2入門 / Angular2アプリを爆速開発
+http://qiita.com/kitfactory/items/c95ca84371670b21f4ac
