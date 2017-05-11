@@ -22,7 +22,7 @@
     <md-toolbar color="primary">
         <button class="app-icon-button" (click)="sidenav.toggle()">
       <i class="material-icons app-toolbar-menu">menu</i>
-    </button> Angular Material2 Example App
+    </button> Angular Match
 
         <span class="app-toolbar-filler"></span>
     </md-toolbar>
@@ -30,6 +30,17 @@
     <main flex class="app-content" style="overflow-y: auto;">
         <div class="outer-outlet">
             <router-outlet></router-outlet>
+        </div>
+
+        <div class="container">
+            <div class="row" *ngFor="let post of posts">
+                <div class="card card-block">
+                    <h4 class="card-title">{{ post.title }}</h4>
+                    <p class="card-text">{{post.body}}</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
         </div>
     </main>
     <md-toolbar color="primary" class="app-footer">

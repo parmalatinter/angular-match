@@ -3,3 +3,7 @@
 body {
     margin: 0;
 }
+
+md-dialog-container {
+    margin: auto !important;
+}

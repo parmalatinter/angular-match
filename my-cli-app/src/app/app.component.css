@@ -8,6 +8,9 @@ md-sidenav-layout.m2app-dark {
 
 .app-content {
     padding: 20px;
+    overflow-y: scroll;
+    height: -webkit-calc(100% - 20px);
+    height: calc(100% - 150px);
 }
 
 .app-content md-card {
