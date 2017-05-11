@@ -1,3 +1,40 @@
-<h1>
-  {{title}}
-</h1>
+<md-sidenav-container class="demo-sidenav-container">
+
+    <md-sidenav #sidenav mode="side" opened="true" class="app-sidenav">
+        <md-list>
+            <md-list-item>
+                <h3 md-line> Item 1 </h3>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item>
+                <h3 md-line> Item 1 </h3>
+            </md-list-item>
+            <md-divider></md-divider>
+            <md-list-item>
+                <h3 md-line> Item 1 </h3>
+            </md-list-item>
+            <md-divider></md-divider>
+        </md-list>
+    </md-sidenav>
+
+    <md-toolbar color="primary">
+        <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button> Angular Material2 Example App
+
+        <span class="app-toolbar-filler"></span>
+    </md-toolbar>
+
+    <div class="app-content">
+
+
+        <md-card>
+            <h1>
+                {{title}} {{message}}
+            </h1>
+            <app-hello></app-hello>
+        </md-card>
+
+    </div>
+
+</md-sidenav-container>
