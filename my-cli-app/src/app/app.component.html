@@ -2,17 +2,19 @@
 
     <md-sidenav #sidenav mode="side" opened="true" class="app-sidenav">
         <md-list>
-            <md-list-item>
-                <h3 md-line> Item 1 </h3>
+            <md-list-item [routerLink]="['/hello']">
+                <h3 md-line>Hello</h3>
             </md-list-item>
             <md-divider></md-divider>
-            <md-list-item>
-                <h3 md-line> Item 1 </h3>
+            <md-list-item [routerLink]="['/index']">
+                <h3 md-line> Index</h3>
             </md-list-item>
             <md-divider></md-divider>
-            <md-list-item>
-                <h3 md-line> Item 1 </h3>
+            <md-list-item [routerLink]="['/mypage']">
+                <h3 md-line> Mypage </h3>
             </md-list-item>
+            <md-divider></md-divider>
+
             <md-divider></md-divider>
         </md-list>
     </md-sidenav>
@@ -25,22 +27,19 @@
         <span class="app-toolbar-filler"></span>
     </md-toolbar>
 
-    <div class="app-content">
+    <main flex class="app-content" style="overflow-y: auto;">
+        <div class="outer-outlet">
+            <router-outlet></router-outlet>
+        </div>
+    </main>
+    <md-toolbar color="primary" class="app-footer">
+        <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button> {{title}} {{message}}
 
+        <span class="app-toolbar-filler"></span>
+        <!--<app-hello></app-hello>-->
 
-        <md-card>
-            <h1>
-                {{title}} {{message}}
-            </h1>
-            <app-hello></app-hello>
+    </md-toolbar>
 
-        </md-card>
-
-    </div>
-
-    <a [routerLink]="['/mypage']">mypage</a>
-    <a [routerLink]="['/index']">index</a>
-    <div class="outer-outlet">
-        <router-outlet></router-outlet>
-    </div>
 </md-sidenav-container>
