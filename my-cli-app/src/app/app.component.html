@@ -1,6 +1,17 @@
 <md-sidenav-container class="demo-sidenav-container">
 
     <md-sidenav #sidenav mode="side" opened="true" class="app-sidenav">
+
+        <md-toolbar color="primary">
+            menu
+            <span class="app-toolbar-filler"></span>
+            <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button>
+
+            <span class="app-toolbar-filler"></span>
+        </md-toolbar>
+
         <md-list>
             <md-list-item [routerLink]="['/hello']">
                 <h3 md-line>Hello</h3>
